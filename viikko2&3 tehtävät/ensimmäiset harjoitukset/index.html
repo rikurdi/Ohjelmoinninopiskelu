@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="t1">
+        <h1>Tehtävä 1</h1>
+        <label for="eka">Anna 1. numero:</label>
+            <input type="text" name="eka" id="eka">
+        <label for="toka">Anna 2. numero:</label>
+            <input type="text" name="toka" id="toka">
+        <label for="kolmas">Anna 3. numero:</label>
+            <input type="text" name="kolmas" id="kolmas">
+        <button onclick="getValues(); jarjesta();">Järjestä luvut</button>
+        <p id="vastaus"></p>
+    </div>
+
+    <div class="t2">
+        <h1>Tehtävä 2</h1>
+        <label for="eka1">Anna 1. numero:</label>
+            <input type="text" name="eka" id="eka1">
+        <label for="toka1">Anna 2. numero:</label>
+            <input type="text" name="toka" id="toka1">
+        <label for="kolmas1">Anna 3. numero:</label>
+            <input type="text" name="kolmas" id="kolmas1">
+        <label for="neljas1">Anna 4. numero:</label>
+            <input type="text" name="neljas" id="neljas1">
+        <label for="viides1">Anna 5. numero:</label>
+            <input type="text" name="viides" id="viides1">
+        <button onclick="getValues2(); highestValue();">Etsi suurin numero</button>
+        <p id="vastaus1"></p>
+    </div>
+    
+    <div class="t3">
+        <h1>Tehtävä 3</h1>
+        <label for="luku">Anna luku:</label>
+            <input type="text" name="luku" id="luku">
+        <button onclick="jakojaannos();">Tarkista</button>
+        <p id="vastaus2"></p>
+    </div>
+
+    <div class="t4">
+        <h1>Tehtävä 4</h1>
+        <label for="ika">Anna ikäsi:</label>
+            <input type="text" name="ika" id="ika">
+        <button onclick="kayttajanIka();">Näytö ajoneuvo</button>
+        <p id="vastaus3"></p>
+    </div>
+
+    <div class="t5">
+        <h1>Tehtävä 5</h1>
+        <label for="kielet">Valitse kieli</label>
+            <select name="kielet" id="kielet">
+                <option value="Hello World">Englanti</option>
+                <option value="Hej Världen">Ruotsi</option>
+                <option value="Hola Mundo">Espanja</option>
+            </select>
+        <button onclick="kielet();">Käännä</button>
+        <p id="vastaus4"></p>
+    </div>
+
+
+    <script type="text/javascript" src="tehtavat.js">
+    </script>
+</body>
+</html>
