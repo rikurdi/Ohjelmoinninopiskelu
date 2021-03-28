@@ -1,0 +1,22 @@
+body {
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tehtava {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 40px;
+    width: 700px;
+    height: auto;
+    background-color: chocolate;
+    border-radius: 5px;
+}
+
+h1 {
+    color:cornsilk;
+}
