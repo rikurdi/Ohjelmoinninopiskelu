@@ -56,6 +56,12 @@ function kayttajanIka() {
 //Tehtävä 5/////////////////////////////////////////
 
 function kielet() {
-    var val = document.getElementById("kielet");
-    document.getElementById("vastaus4").innerHTML = val.value;
+    var kieli = document.getElementById("kielet").value;
+    if(kieli == eng) {
+        document.write("Hello World!");
+    }else if(kieli == swe) {
+        document.write("Hej Världen!");
+    }else{
+        document.write("Hola Mundo!");
+    }
 }
