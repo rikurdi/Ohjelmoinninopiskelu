@@ -5,12 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viikko 3 toiset tehtävät</title>
+    <link rel="stylesheet" href="vk3_toiset.css">
 </head>
 <body>
     <div class="t1">
         <p>Anna sana jonka pisteet lasketaan: </p>
         <input type="text" name="scrabble" id="scrabble">
-        <button onclick="scrabbler(document.getElementById('scrabble'))">Laske pisteet</button>
+        <button onclick="scrabbler()">Laske pisteet</button>
+        <p id="score"></p>
     </div>
+    <div class="t2">
+        <p>Ensi viikon lottorivi</p>
+        <button onclick="lottery()">Arvo lottorivi</button>
+        <p id="lottorivi"></p>
+    </div>
+    <div class="t3">
+        <p>[[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]]</p>
+        <button onclick="createTable(tableData)">Muunna taulukoksi</button>
+    </div>
+
+    <script type="text/javascript" src="vk3_toiset.js"></script>
 </body>
 </html>

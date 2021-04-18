@@ -2,7 +2,6 @@
 function scrabbler() {
     var word = document.getElementById("scrabble").value;
     word = word.toUpperCase();
-    var summa = 0;
 
     const pisteet= {
         'A' : 1,'E' : 1,'I' : 1,'N' : 1,'S' : 1,'T' : 1,
@@ -14,7 +13,38 @@ function scrabbler() {
         'C' : 10,
         'Q' : 12, 'Z' : 12
     };
-    for(var i = 0; i <word.length; i++) {
-        summa += pisteet[word[i]] || 0;
-    }
+    var sum = 0;
+    for (var i = 0; i < word.length; ++i) {
+    sum += pisteet[word.charAt(i)] || 0;
 }
+
+    document.getElementById("score").innerHTML = "Pisteet: " + sum;
+}
+
+// TEHTÄVÄ 2
+function lottery() {
+    var numbers = [];
+    var min = Math.ceil(1);
+    var max = Math.floor(40);
+    for(var i = 0; i < 7; i++) {
+        numbers.push(Math.floor(Math.random() * (max-min) + min));
+    }
+    document.getElementById("lottorivi").innerHTML = numbers;
+}
+// TEHTÄVÄ 2
+var tableData = [[1,2,1,24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+function createTable(tableData) {
+    var table = document.createElement('table');
+    var row = {};
+    var cell = {};
+  
+    tableData.forEach(function(rowData) {
+      row = table.insertRow(-1); // [-1] for last position in Safari
+      rowData.forEach(function(cellData) {
+        cell = row.insertCell();
+        cell.textContent = cellData;
+      });
+    });
+    document.body.appendChild(table);
+  }
+  
