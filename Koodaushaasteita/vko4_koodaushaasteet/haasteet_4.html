@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koodaushaasteita 4</title>
+    <link rel="stylesheet" href="haasteet4.css">
+</head>
+<body>
+    <form id="t1">
+        <label for="string">Syötä sana:</label>
+        <input type="text" name="string" id="str">
+        <button onclick="isoKirjain()">Tarkasta onko iso alkukirjain</button>
+        <p id="t1v"></p>
+    </form>
+    <form id="t2">
+        <label for="whitespace">Syötä sana:</label>
+        <input type="text" name="whitespace" id="whitespace">
+        <button onclick="trimmer()">Poista etu- ja loppuvälilyönnit</button>
+        <p id="t2v"></p>
+    </form>
+    <form id="t3">
+        <label for="vowels">Syötä sana:</label>
+        <input type="text" name="vowels" id="vowels">
+        <button onclick="countVowels()">Laske vokaalit</button>
+        <p id="t3v"></p>
+    </form>
+    <form id="t4">
+        <label for="alphanumeric">Syötä sana:</label>
+        <input type="text" name="alphanumeric" id="alphanumeric">
+        <button onclick="isAlphanumeric()">Tarkasta onko alfanumeerinen</button>
+        <p id="t4v"></p>
+    </form>
+    <form id="t5">
+        <label for="postal">Syötä sana:</label>
+        <input type="text" name="postal" id="postal">
+        <button onclick="postalCode()">Tarkasta onko postinumero</button>
+        <p id="t5v"></p>
+    </form>
+
+    <script type="text/javascript" src="haasteet4.js"></script>
+</body>
+</html>
