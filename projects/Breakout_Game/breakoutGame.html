@@ -1,0 +1,35 @@
+<!-- Breakout oma ryhmäprojekti html-osuus/ Paul Willman, Eriko Korhonen, Riku Kaartoaho 6.5.2021-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="breakoutGame.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Breakout Peli</title>
+</head>
+
+<body>
+  <div id="gameStart">
+    <h3>Breakout Game</h3>
+    <button id="start-btn" onclick="startGame()">Play!</button>
+     <img src="assets/instructions.png" alt="">
+  </div>
+  <div id="gameOverScreen">
+    <img src="assets/gameOver4.png" alt="gameover">
+    <div id="restart">Try again!</div>
+  </div>
+  <div id="gameWon">
+    <h3>You win!</h3>
+    <button onclick="location.reload()">Go back</button>
+  </div>
+<!--  <div class="canvas-container"> -->
+  <canvas id="breakout" width="600" height="800"></canvas>
+  <script type="text/javascript" src="breakoutGame.js"></script>
+<!-- </div> -->
+</body>
+
+</html>
