@@ -17,15 +17,16 @@ function parilliset() {
     }
 }
 
-//TEHTÄVÄ 2 KESKEN!!!!!
+//TEHTÄVÄ 2
 function muuntaja() {
-    var str = document.getElementById("toka").value;
-    var myArr = str.split("");
-
-    for(i=0; i<myArr.length; i++) {
-        myArr.push(["\u00d6"]);
-    }
-    console.log(myArr);
+    var input = document.getElementById('toka').value;
+    var text = input.split("");
+    var addLetter = "";
+    var i;
+    for (i = 0; i < text.length; i++) {
+        addLetter += text[i] + "ö";
+      }
+    document.getElementById("v2").innerHTML = addLetter;
     
 }
 
@@ -33,9 +34,7 @@ function muuntaja() {
 function check() {
     var str = ""
     str = document.getElementById("kolmas").value;
-    if(str.includes('\u00f6')) {
-        document.getElementById("v3").innerHTML = "on"
-    } else if(str.includes('\u00d6')) {
+    if(str.includes("ö" || "Ö")) {
         document.getElementById("v3").innerHTML = "on"
     }else {
        document.getElementById("v3").innerHTML = "ei ole"
@@ -108,28 +107,38 @@ function minmax() {
 
 //TEHTÄVÄ 10, en saanut ratkaistua.
 function saliksia() {
-   
-}
-
-//TEHTÄVÄ 11, en saanut ratkaistua.
-function laskuja() {
-    var pienempi = document.getElementById("pieninro").value;
-    var suurempi = document.getElementById("isonro").value;
-    var evenSum = 0;
-    var oddSum = 0;
-    var even = 0;
-    var odd = 0;
-
-    for(i=pienempi; i<=suurempi; i++) {
-        if(i % 2 === 0) {
-            console.log(i);
-            even += i;
-        } else if(i % 2 !==0){
-            console.log(i);
-            odd += i;
-        }
+    var input = document.getElementById('salis').value;
+    var text = input.split("");
+    var addLetter = "";
+    var i;
+    let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    let str = chars.charAt(Math.floor(Math.random() * chars.length));
+    for (i = 0; i < text.length; i++) {
+        addLetter += text[i] + str;
     }
-    document.getElementById("evenNro").innerHTML = "Parillisten summa: " + even;
-    document.getElementById("oddNro").innerHTML = "Parittomien summa: " + odd;
-
+    document.getElementById("v10").innerHTML = addLetter;
 }
+
+//TEHTÄVÄ 11
+function laskut() {
+    var minNum = parseInt(document.getElementById("min").value); // parseInt siksi koska jostain syystä parilliset-taulukon ensimmäinen arvo näkyi stringinä.
+    var maxNum = document.getElementById("max").value;
+    var nums = [];
+    for(var i = minNum; i<=maxNum; i++) 
+    {
+        nums.push(i);
+    }
+    var parilliset = nums.filter(number => number % 2 == 0);
+    var parittomat = nums.filter(number => number % 2 !== 0);
+    var evenSum = parilliset.reduce((a, b) => {
+        return a + b;
+    });
+    var oddSum = parittomat.reduce((a, b) => {
+        return a + b;
+    });
+
+    document.getElementById("v11").innerHTML = 
+    "Parilliset numerot: " + parilliset + " ja niiden summa " + evenSum + "<br>" +
+    "Parittomat: " + parittomat + " ja niiden summa " + oddSum;
+}
+

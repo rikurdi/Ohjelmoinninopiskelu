@@ -13,32 +13,36 @@ function negVaiPos() {
 
 // TEHTÄVÄ 2
 function viikonpaivat() {
-    var luku = document.getElementById("pva").value;
+    var luku = document.getElementById("paivat").value;
     var paiva = "";
 
     switch(luku) {
-        case 1:
+        case "1":
             paiva = "Maanantai";
             break;
-        case 2:
+        case "2":
             paiva = "Tiistai";
             break;
-        case 3:
+        case "3":
             paiva = "Keskiviikko";
             break;
-        case 4:
+        case "4":
             paiva = "Torstai";
             break;
-        case 5:
+        case "5":
             paiva = "Perjantai";
             break;
-        case 6:
+        case "6":
             paiva = "Lauantai";
             break;
-        case 7:
+        case "7":
             paiva = "Sunnuntai";
+            break;
+        default:
+            alert("tarkista valinnat");
+            break;
     }
-        document.getElementById("tehtava2").innerHTML = "Tänään on" + paiva;
+        document.getElementById("tehtava2").innerHTML = "Tänään on " + paiva;
 
 }
 

@@ -55,13 +55,10 @@ function kayttajanIka() {
 
 //Tehtävä 5/////////////////////////////////////////
 
-function kielet() {
-    var kieli = document.getElementById("kielet").value;
-    if(kieli == eng) {
-        document.write("Hello World!");
-    }else if(kieli == swe) {
-        document.write("Hej Världen!");
-    }else{
-        document.write("Hola Mundo!");
-    }
+function Kielet() {
+    var selectOne = document.getElementById("kielet");
+    var index = selectOne.selectedIndex;
+    var selectedValue = selectOne.options[index].value;
+    
+    alert(selectedValue);
 }

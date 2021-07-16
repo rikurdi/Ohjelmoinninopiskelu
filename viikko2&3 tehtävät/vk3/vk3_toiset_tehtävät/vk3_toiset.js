@@ -31,7 +31,7 @@ function lottery() {
     }
     document.getElementById("lottorivi").innerHTML = numbers;
 }
-// TEHTÄVÄ 2
+// TEHTÄVÄ 3
 var tableData = [[1,2,1,24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
 function createTable(tableData) {
     var table = document.createElement('table');
@@ -39,7 +39,7 @@ function createTable(tableData) {
     var cell = {};
   
     tableData.forEach(function(rowData) {
-      row = table.insertRow(-1); // [-1] for last position in Safari
+      row = table.insertRow(-1);
       rowData.forEach(function(cellData) {
         cell = row.insertCell();
         cell.textContent = cellData;
@@ -47,4 +47,19 @@ function createTable(tableData) {
     });
     document.body.appendChild(table);
   }
+
+  function kortit() {
+    var numbers = ['2','3','4','5','6','7','8','9','10','J','Q','K','A'];
+    var colors = ['&#9828;', '&#9827;', '&#9826;', '&#9825;'];
+    var num1 = numbers[Math.floor(Math.random()*13)];
+    var num2 = numbers[Math.floor(Math.random()*13)];
+    var num3 = numbers[Math.floor(Math.random()*13)];
+    var num4 = numbers[Math.floor(Math.random()*13)];
+    var col1 = colors[Math.floor(Math.random()*4)];
+    var col2 = colors[Math.floor(Math.random()*4)];
+    var col3 = colors[Math.floor(Math.random()*4)];
+    var col4 = colors[Math.floor(Math.random()*4)];
+    var result = [col1, num1, col2, num2, col3, num3, col4, num4];
+    document.getElementById('arvottu').innerHTML = result;
+}
   
